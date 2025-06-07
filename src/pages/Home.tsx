@@ -46,7 +46,7 @@ const Home = () => {
             <ShieldCheck size={20} />
             <h2 className="text-xl font-semibold">Access Requirements</h2>
           </div>
-          <ul className="list-disc list-inside pl-4 text-sm text-gray-400 space-y-1">
+          <ul className="list-disc list-inside pl-4 text-base text-gray-400 space-y-1">
             <li>⚙️ Insert <strong>7 compboards</strong> into the slots located near the light panel.</li>
             <li>✅ 1+ green light must be active, and no red lights present.</li>
             <li>🔐 Once unlocked, the Engineering door remains open for <strong>30 minutes</strong>.</li>
@@ -63,9 +63,9 @@ const Home = () => {
           <p className="text-base text-gray-400">
             Once the <strong>7 compboards are inserted</strong> and the ship is claimed via ASOP:
           </p>
-          <ul className="list-disc list-inside pl-4 text-sm text-gray-400 mt-2 space-y-1">
-            <li>🚪 The main Hangar door opens for <strong>10 minutes</strong>.</li>
+          <ul className="list-disc list-inside pl-4 text-base text-gray-400 mt-2 space-y-1">
             <li>🏆 Only <strong>one player</strong> can claim the reward ship.</li>
+            <li>🚪 The main Hangar door opens for <strong>10 minutes</strong>.</li>
             <li>📦 Bring a cargo ship — additional ship components/weapons spawn, and may not fit in the reward ship's storage.</li>
           </ul>
         </div>
