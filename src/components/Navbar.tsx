@@ -32,7 +32,7 @@ const SidebarLink: React.FC<SidebarLinkProps> = ({
     <li>
       <Link
         to={to}
-        className={`flex items-center gap-2 px-4 py-2 text-lg rounded-lg transition-all duration-200 ${
+        className={`flex items-center gap-2 px-4 py-2 text-xl rounded-lg transition-all duration-200 ${
           isActive
             ? "bg-yellow-400/70 text-gray-800"
             : "text-gray-400 hover:text-white/90 hover:bg-white/10"
@@ -50,18 +50,15 @@ const SocialLink: React.FC<SocialLinkProps> = ({
   href,
   icon: Icon,
   color,
-  ringColor,
 }) => {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${color} hover:opacity-90 transition-colors duration-200 focus:outline-none focus:ring-2 ${
-        ringColor || ""
-      } rounded-lg p-1`}
+      className={`${color} hover:opacity-90 transition-colors duration-200 rounded-lg p-1`}
     >
-      <Icon size={26} />
+      <Icon size={28} />
     </a>
   );
 };
@@ -80,7 +77,6 @@ const socialLinks = [
   {
     href: "https://github.com/Feareis/Star-Citizen_Executive-Hangar",
     color: "text-gray-400 hover:text-gray-500",
-    ringColor: "focus:ring-green-500/50",
     icon: Github,
   },
 ];
@@ -89,13 +85,13 @@ const socialLinks = [
 export const Navbar = () => {
   return (
     <header className="w-full h-16 bg-[#304149] border-b border-gray-600 shadow-lg">
-      <div className="container mx-auto px-6 h-full flex items-center justify-between">
+      <div className="container mx-auto px-6 h-full flex items-center justify-around">
         {/* Logo link to home */}
         <Link
           to="/"
           className="flex items-center gap-2 py-2 rounded-lg text-gray-400 p-1 transition-all duration-200"
         >
-          <Orbit size={26} />
+          <Orbit size={28} />
         </Link>
 
         {/* Navigation links */}
@@ -107,9 +103,9 @@ export const Navbar = () => {
 
         {/* Social links */}
         <ul className="flex items-center gap-1 sm:gap-3">
-          {socialLinks.map(({ href, color, ringColor, icon }) => (
+          {socialLinks.map(({ href, color, icon }) => (
             <li key={href}>
-              <SocialLink href={href} color={color} ringColor={ringColor} icon={icon} />
+              <SocialLink href={href} color={color} icon={icon} />
             </li>
           ))}
         </ul>
