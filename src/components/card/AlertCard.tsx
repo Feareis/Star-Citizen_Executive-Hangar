@@ -1,17 +1,24 @@
 import { FC, ReactNode } from "react";
-import { AlertTriangle, CircleX, CheckCircle, RefreshCcw, Info } from "lucide-react";
+import {
+  AlertTriangle,
+  CircleX,
+  CheckCircle,
+  RefreshCcw,
+  Info,
+} from "lucide-react";
 
-type AlertVariant = "warning" | "error" | "info" | "success" | "reset";
+type AlertVariant = "warning" | "error" | "info" | "success" | "default";
 
 interface AlertCardProps {
-  icon?: ReactNode
-  title: string
-  listItems?: string[]
-  className?: string
-  variant?: AlertVariant
-};
+  icon?: ReactNode;
+  title: string;
+  listItems?: string[];
+  className?: string;
+  variant?: AlertVariant;
+  textSize?: string;
+}
 
-// Style map for bg, border and text per variant
+// Maps each variant to specific styles and a default icon
 const variantStyles: Record<
   AlertVariant,
   {
@@ -50,7 +57,7 @@ const variantStyles: Record<
     list: "text-green-200/70",
     defaultIcon: <CheckCircle size={20} />,
   },
-  reset: {
+  default: {
     bg: "bg-gray-500/10",
     border: "border-gray-500/20",
     text: "text-gray-200/90",
@@ -64,9 +71,10 @@ export const AlertCard: FC<AlertCardProps> = ({
   title,
   listItems,
   className = "",
+  textSize = "",
   variant = "warning",
 }) => {
-  const { bg, border, text, list, defaultIcon } = variantStyles[variant]
+  const { bg, border, text, list, defaultIcon } = variantStyles[variant];
 
   return (
     <section
@@ -75,11 +83,15 @@ export const AlertCard: FC<AlertCardProps> = ({
       aria-live="assertive"
     >
       <div className="flex items-start gap-3">
+        {/* Icon container - fallback to default icon if none provided */}
         <div className={`${text} flex-shrink-0`} aria-hidden="true">
           {icon ?? defaultIcon}
         </div>
-        <div className={`text-sm ${text}`}>
+
+        <div className={`${text} ${textSize}`}>
           <p className="font-medium mb-1">{title}</p>
+
+          {/* Optional list of additional details */}
           {listItems?.length > 0 && (
             <ul className={`list-disc list-inside space-y-1 ${list}`}>
               {listItems.map((item, index) => (
