@@ -71,7 +71,7 @@ export default function HangarTimer() {
 
         setLights(newLights);
         setStatus("close");
-        setTimer(`Opens in ${formatTime(redTime)}`);
+        setTimer(`Open in ${formatTime(redTime)}`);
       } else if (remaining > BLACK_PHASE) {
         const greenTime = remaining - BLACK_PHASE;
         const timeSinceGreenStart = GREEN_PHASE - greenTime;
@@ -138,7 +138,7 @@ export default function HangarTimer() {
 
       <div className="text-4xl font-semibold text-center text-gray-400/70 mb-6">
         {status === "reset"
-          ? `Resets in ${formatTime(Math.max(0, BLACK_PHASE - (cycleElapsed - RED_PHASE - GREEN_PHASE))).slice(3)}`
+          ? `${formatTime(Math.max(0, BLACK_PHASE - (cycleElapsed - RED_PHASE - GREEN_PHASE))).slice(3)}`
           : Timer}
       </div>
 
