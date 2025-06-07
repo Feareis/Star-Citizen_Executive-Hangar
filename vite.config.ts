@@ -4,9 +4,11 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-// https://vitejs.dev/config/
+// Main Vite configuration
 export default defineConfig({
   plugins: [tailwindcss(), react()],
+
+  // Path aliases for easier imports
   resolve: {
     alias: {
       "@components": resolve(__dirname, "src/components"),
@@ -16,13 +18,19 @@ export default defineConfig({
       "@pages": resolve(__dirname, "src/pages"),
     },
   },
+
+  // Dependency optimizer
   optimizeDeps: {
     exclude: [],
   },
+
+  // Build output settings
   build: {
-    target: "es2017",
+    target: "es2017", // Modern browser target
     sourcemap: false,
   },
+
+  // Development server settings
   server: {
     fs: {
       strict: true,
