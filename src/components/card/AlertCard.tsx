@@ -1,9 +1,10 @@
 import { FC, ReactNode } from "react";
+import { AlertTriangle, CircleX, CheckCircle, RefreshCcw, Info } from "lucide-react";
 
-type AlertVariant = "warning" | "error" | "info";
+type AlertVariant = "warning" | "error" | "info" | "success" | "reset";
 
 interface AlertCardProps {
-  icon: ReactNode
+  icon?: ReactNode
   title: string
   listItems?: string[]
   className?: string
@@ -11,24 +12,50 @@ interface AlertCardProps {
 };
 
 // Style map for bg, border and text per variant
-const variantStyles: Record<AlertVariant, { bg: string; border: string; text: string; list: string }> = {
+const variantStyles: Record<
+  AlertVariant,
+  {
+    bg: string;
+    border: string;
+    text: string;
+    list: string;
+    defaultIcon: ReactNode;
+  }
+> = {
   warning: {
     bg: "bg-yellow-500/10",
-    border: "border-blue-500/80",
+    border: "border-yellow-500/20",
     text: "text-yellow-200/90",
     list: "text-yellow-200/70",
+    defaultIcon: <AlertTriangle size={20} />,
   },
   error: {
     bg: "bg-red-500/10",
-    border: "border-red-500/80",
+    border: "border-red-500/20",
     text: "text-red-200/90",
     list: "text-red-200/70",
+    defaultIcon: <CircleX size={20} />,
   },
   info: {
     bg: "bg-blue-500/10",
-    border: "border-blue-500/80",
+    border: "border-blue-500/20",
     text: "text-blue-200/90",
     list: "text-blue-200/70",
+    defaultIcon: <Info size={20} />,
+  },
+  success: {
+    bg: "bg-green-500/10",
+    border: "border-green-500/20",
+    text: "text-green-200/90",
+    list: "text-green-200/70",
+    defaultIcon: <CheckCircle size={20} />,
+  },
+  reset: {
+    bg: "bg-gray-500/10",
+    border: "border-gray-500/20",
+    text: "text-gray-200/90",
+    list: "text-gray-200/70",
+    defaultIcon: <RefreshCcw size={20} />,
   },
 };
 
@@ -39,17 +66,17 @@ export const AlertCard: FC<AlertCardProps> = ({
   className = "",
   variant = "warning",
 }) => {
-  const { bg, border, text, list } = variantStyles[variant]
+  const { bg, border, text, list, defaultIcon } = variantStyles[variant]
 
   return (
     <section
-      className={`${bg} ${border} rounded-lg p-4 mb-4 ${className}`}
+      className={`border ${bg} ${border} rounded-lg p-4 mb-4 ${className}`}
       role="alert"
       aria-live="assertive"
     >
       <div className="flex items-start gap-3">
-        <div className={`${text} flex-shrink-0 mt-0.5`} aria-hidden="true">
-          {icon}
+        <div className={`${text} flex-shrink-0`} aria-hidden="true">
+          {icon ?? defaultIcon}
         </div>
         <div className={`text-sm ${text}`}>
           <p className="font-medium mb-1">{title}</p>
