@@ -48,7 +48,7 @@ const Maps = () => {
       </aside>
 
       {/* Map viewer */}
-      <main className="flex-1 bg-[#212526] rounded-lg border border-gray-700/70 flex items-center justify-center overflow-hidden">
+      <main className="flex-1 bg-[#111219] rounded-lg border border-gray-700/70 flex items-center justify-center overflow-hidden">
         {selectedMap ? (
           <div className="w-full h-full rounded-lg shadow-lg overflow-hidden">
             <TransformWrapper

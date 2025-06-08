@@ -82,7 +82,7 @@ export default function HangarTimer() {
 
         setLights(newLights);
         setStatus("open");
-        setTimer(`Open for ${formatTime(greenTime)}`);
+        setTimer(`Reset in ${formatTime(greenTime)}`);
       } else {
         setLights(Array(5).fill("black"));
         setStatus("reset");
@@ -138,7 +138,7 @@ export default function HangarTimer() {
 
       <div className="text-4xl font-semibold text-center text-gray-400/70 mb-6">
         {status === "reset"
-          ? `${formatTime(Math.max(0, BLACK_PHASE - (cycleElapsed - RED_PHASE - GREEN_PHASE))).slice(3)}`
+          ? `Charging in ${formatTime(Math.max(0, BLACK_PHASE - (cycleElapsed - RED_PHASE - GREEN_PHASE))).slice(3)}`
           : Timer}
       </div>
 

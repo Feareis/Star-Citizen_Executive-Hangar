@@ -67,9 +67,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({
 const navLinks = [
   { to: "/", label: "Home", icon: Home },
   { to: "/map", label: "Map", icon: Map },
-  { to: "/timer", label: "Timer", icon: Timer },
   { to: "/ship-reward", label: "Ships", icon: Plane },
-  // { to: "/about", label: "About", icon: Wrench },
 ];
 
 // External social links
