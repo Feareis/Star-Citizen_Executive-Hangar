@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Navbar } from "@components/Navbar";
 import { Footer } from "@components/Footer";
+import BuyMeACoffeeButton from "@components/button/BuyMeACoffeeButton";
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -14,8 +15,15 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <Navbar />
 
       {/* Main scrollable content area */}
-      <main className="flex-1 overflow-y-auto custom-scroll py-8">
-        <div className="w-[55%] mx-auto">{children}</div>
+      <main className="flex-1 relative overflow-y-auto custom-scroll py-8">
+        <div className="w-[55%] mx-auto">
+          {children}
+        </div>
+
+        {/* Floating Button Inside Main */}
+        <div className="absolute bottom-4 right-4 z-50">
+          <BuyMeACoffeeButton />
+        </div>
       </main>
 
       {/* Footer section */}

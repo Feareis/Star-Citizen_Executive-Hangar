@@ -16,7 +16,7 @@ const formatTime = (seconds: number) => {
 // Styling + text for each status
 const statusStyles = {
   reset: {
-    bg: "bg-yellow-500/10",
+    bg: "bg-yellow-500/15",
     border: "border border-yellow-500/20",
     text: "text-yellow-500/80",
     message: "Hangar Resetting",
@@ -34,7 +34,7 @@ const statusStyles = {
     message: "Hangar Open",
   },
   default: {
-    bg: "bg-gray-600/10",
+    bg: "bg-gray-600/15",
     border: "border border-gray-600/20",
     text: "text-gray-500/80",
     message: "Hangar Status Unknown",

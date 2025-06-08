@@ -1,5 +1,6 @@
 import { useLocation, Link } from "react-router-dom";
 import { Orbit, Home, Map, Timer, Plane, Wrench, Github } from "lucide-react";
+import BuyMeACoffeeButton from "@components/button/BuyMeACoffeeButton";
 
 // Props for each internal navigation link
 interface SidebarLinkProps {
@@ -82,8 +83,8 @@ const socialLinks = [
 // Navbar component with logo, nav links and social links
 export const Navbar = () => {
   return (
-    <header className="w-full h-16 bg-[#304149] border-b border-gray-600 shadow-lg">
-      <div className="container mx-auto px-6 h-full flex items-center justify-around">
+    <header className="w-full flex h-16 bg-[#304149] border-b border-gray-700/60 shadow-lg">
+      <div className="w-[58%] mx-auto h-full flex items-center justify-between">
         {/* Logo link to home */}
         <Link
           to="/"
