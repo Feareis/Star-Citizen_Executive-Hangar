@@ -23,12 +23,12 @@ export const ShipCard: FC<ShipCardProps> = ({
   links,
 }) => {
   return (
-    <div className="bg-[#212526] border border-white/10 rounded-xl p-3 w-full max-w-sm space-y-6 shadow-md">
+    <div className="bg-[#212526] border border-gray-700/70 rounded-xl p-3 w-full max-w-sm space-y-6 shadow-md">
       <h3 className="text-center text-xl font-bold text-gray-300/80">{name}</h3>
       <img
         src={imageUrl}
         alt={name}
-        className="w-full h-48 object-cover rounded-md border border-white/5"
+        className="w-full h-48 object-cover rounded-lg border border-white/5"
       />
       <div className="flex flex-wrap gap-2 justify-center">
         {tags.map((tag, i) => (
