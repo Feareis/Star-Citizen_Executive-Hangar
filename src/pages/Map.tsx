@@ -121,18 +121,24 @@ const Maps = () => {
         </main>
       </div>
       <div className="flex flex-col gap-4 w-full">
-        {Object.entries(mapTimers[selectedMapId]).map(([category, timers]) => (
-          <ExpandableSection key={category} title={category}>
-            {timers.map((timer) => (
-              <CountdownTimerCard
-                key={`${selectedMapId}-${timer.id}`}
-                id={`${selectedMapId}-${timer.id}`}
-                title={timer.title}
-                initialDuration={timer.initialDuration}
-              />
-            ))}
-          </ExpandableSection>
-        ))}
+        {mapTimers[selectedMapId] ? (
+          Object.entries(mapTimers[selectedMapId]).map(([category, timers]) => (
+            <ExpandableSection key={category} title={category}>
+              {timers.map((timer) => (
+                <CountdownTimerCard
+                  key={`${selectedMapId}-${timer.id}`}
+                  id={`${selectedMapId}-${timer.id}`}
+                  title={timer.title}
+                  initialDuration={timer.initialDuration}
+                />
+              ))}
+            </ExpandableSection>
+          ))
+        ) : (
+          <div className="text-center text-gray-400">
+            No keycards/compboards timers available for this map.
+          </div>
+        )}
       </div>
     </div>
   );
