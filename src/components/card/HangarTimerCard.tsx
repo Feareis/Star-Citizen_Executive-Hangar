@@ -133,7 +133,7 @@ export default function HangarTimer() {
   const { bg, border, text, message } = statusStyles[status];
 
   return (
-    <section className={`w-full rounded-xl shadow-xl p-6 ${border} ${bg} ${text}`}>
+    <section className={`w-full rounded-xl shadow-lg p-6 ${border} ${bg} ${text}`}>
       <h2 className="text-2xl font-bold text-center mb-4">{message}</h2>
 
       <div className="text-4xl font-semibold text-center text-gray-400/70 mb-6">

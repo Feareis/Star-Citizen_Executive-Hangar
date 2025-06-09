@@ -4,13 +4,13 @@ import { AlertCard } from "@components/card/AlertCard";
 
 const Home = () => {
   return (
-    <section className="text-gray-200 space-y-6">
+    <section className="text-gray-200 space-y-8">
       <AlertCard variant="warning" title="The timer may have a slight lead or delay (30s to 1min) compared to the in-game server."/>
 
       {/* Displays the current hangar timer and status */}
       <HangarTimer />
 
-      <div className="space-y-4 pt-4">
+      <div className="space-y-4">
         {/* Hangar Location Section */}
         <div className="bg-[#212526] p-4 rounded-lg border border-gray-700/70 shadow-lg">
           <div className="flex items-center gap-2 text-orange-400/70 mb-2">
