@@ -84,7 +84,7 @@ const socialLinks = [
 export const Navbar = () => {
   return (
     <header className="w-full flex h-16 bg-[#304149] border-b border-gray-700/60 shadow-lg">
-      <div className="w-[58%] mx-auto h-full flex items-center justify-between">
+      <div className="w-[60%] mx-auto h-full flex items-center justify-between">
         {/* Logo link to home */}
         <Link
           to="/"
