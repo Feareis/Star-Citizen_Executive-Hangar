@@ -16,14 +16,12 @@ const MainLayout = ({ children }: MainLayoutProps) => {
 
       {/* Main scrollable content area */}
       <main className="flex-1 relative overflow-y-auto custom-scroll py-8">
-        <div className="w-[55%] mx-auto">
+        <div className="w-[60%] mx-auto">
           {children}
         </div>
 
-        {/* Floating Button Inside Main */}
-        <div className="absolute bottom-4 right-4 z-50">
-          <BuyMeACoffeeButton />
-        </div>
+        {/* Floating Button Inside Global */}
+        <BuyMeACoffeeButton />
       </main>
 
       {/* Footer section */}
