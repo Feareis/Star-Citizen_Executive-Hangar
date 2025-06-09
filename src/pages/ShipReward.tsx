@@ -123,11 +123,19 @@ const ShipReward = () => {
   return (
     <div className="flex flex-col gap-6">
       <AlertCard variant="warning" title="Informations" textSize="text-base" listItems={["Ships are named as such in your hangar '[Ship name] PYAM Exec'", "All PYAM ships have a very specific paint scheme"]} />
-      {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {ships.map((ship, i) => (
-          <ShipCard key={i} {...ship} />
-        ))}
+      {/* Ships Cards */}
+      <div className="flex flex-col items-center gap-6">
+        {Array.from({ length: Math.ceil(filteredShips.length / 3) }).map((_, rowIndex) => {
+          const startIndex = rowIndex * 3;
+          const rowItems = filteredShips.slice(startIndex, startIndex + 3);
+          return (
+            <div key={rowIndex} className="flex flex-wrap justify-center gap-6">
+              {rowItems.map((ship, i) => (
+                <ShipCard key={`${rowIndex}-${i}`} {...ship} />
+              ))}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
