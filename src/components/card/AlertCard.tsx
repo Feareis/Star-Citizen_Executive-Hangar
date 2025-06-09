@@ -78,7 +78,7 @@ export const AlertCard: FC<AlertCardProps> = ({
 
   return (
     <section
-      className={`border ${bg} ${border} rounded-lg p-4 mb-4 ${className}`}
+      className={`border ${bg} ${border} rounded-lg shadow-lg p-4 ${className}`}
       role="alert"
       aria-live="assertive"
     >
