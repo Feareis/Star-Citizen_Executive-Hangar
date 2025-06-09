@@ -14,10 +14,8 @@
 
 ## 🛠️ Technical stack
 
-
 > [!WARNING]  
 > The timer may have a slight lead or delay (30s to 1min) compared to the in-game server.  
-> Work on __4.1.1__ of Star Citizen Live.
 
 
 | Stack | Notes |
@@ -27,7 +25,14 @@
 | Visualisation | Interactive components |
 
 
-## 📄 License
+## 🧠 Sources & Infos
 
+- Data collected via intensive gameplay on live servers.
+- Images based on the <a href="https://www.reddit.com/r/starcitizen/" target="_blank">star citizen reddit</a> and on <a href="https://starcitizen.tools/" target="_blank">wiki</a>.
+- FR & EN community involved.
+- Based on mechanics observed from Star Citizen __update 4.1.1__.
+
+
+## 📄 License
 
 This project is licensed under the [MIT License](./LICENSE).
