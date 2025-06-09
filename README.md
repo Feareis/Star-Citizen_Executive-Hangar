@@ -6,7 +6,7 @@
   <br>
   <a href="https://sc-exechang.vercel.app" target="_blank"><img src="src/assets/images/sceh-site-logo.png"/></a>
   <br>
-  <span>An interactive web app that lets you understand and visualise how the <a href="https://sc-exechang.vercel.app">Executive Hangar works in Star Citizen</a></span>
+  <span>An interactive web app that lets you understand and visualise how the Executive Hangar works in Star Citizen</span>
   <br>
 </p>
 
