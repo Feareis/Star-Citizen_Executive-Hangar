@@ -23,7 +23,7 @@ export const ShipCard: FC<ShipCardProps> = ({
   links,
 }) => {
   return (
-    <div className="bg-[#212526] border border-gray-700/70 rounded-xl p-3 w-full max-w-sm space-y-6 shadow-md">
+    <div className="bg-[#212526] border border-gray-700/70 rounded-xl shadow-xl p-3 w-full max-w-sm space-y-6">
       <h3 className="text-center text-xl font-bold text-gray-300/80">{name}</h3>
       <img
         src={imageUrl}
