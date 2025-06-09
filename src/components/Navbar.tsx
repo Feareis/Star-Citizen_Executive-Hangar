@@ -75,6 +75,7 @@ const navLinks = [
 const socialLinks = [
   {
     href: "https://github.com/Feareis/Star-Citizen_Executive-Hangar",
+    alt: "https://github.com",
     color: "text-gray-400 hover:text-gray-500",
     icon: Github,
   },
@@ -88,9 +89,14 @@ export const Navbar = () => {
         {/* Logo link to home */}
         <Link
           to="/"
-          className="flex items-center gap-2 py-2 rounded-lg text-gray-400 p-1 transition-all duration-200"
+          className="flex items-center gap-2 py-2 rounded-lg text-gray-400 transition-all duration-200"
         >
-          <Orbit size={28} />
+          <img
+            src="/logo.ico"
+            alt="Star Citizen - Executive Hangar Logo"
+            className="w-18 h-18 object-contain"
+            draggable={false}
+          />
         </Link>
 
         {/* Navigation links */}
@@ -102,9 +108,9 @@ export const Navbar = () => {
 
         {/* Social links */}
         <ul className="flex items-center gap-1 sm:gap-3">
-          {socialLinks.map(({ href, color, icon }) => (
+          {socialLinks.map(({ href, alt, color, icon }) => (
             <li key={href}>
-              <SocialLink href={href} color={color} icon={icon} />
+              <SocialLink href={href} alt={alt} color={color} icon={icon} />
             </li>
           ))}
         </ul>
