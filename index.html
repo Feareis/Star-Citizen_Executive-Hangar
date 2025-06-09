@@ -15,7 +15,7 @@
 
     <!-- Open Graph Meta Tags (Facebook / Discord / X) -->
     <meta property="og:title" content="Executive Hangar" />
-    <meta name="description" content="Star Citizen's Executive Hangar offers high-tier loot, exclusive ships, and rare components." />
+    <meta name="og:description" content="Star Citizen's Executive Hangar offers high-tier loot, exclusive ships, and rare components." />
     <meta property="og:image" content="/pyro.webp" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sc-exechang.vercel.app" />
@@ -27,7 +27,25 @@
     <meta name="twitter:image" content="/pyro.webp" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/pyam.png" />
+    <link rel="icon" type="image/png" href="/logo.ico" />
+    <link rel="canonical" href="https://sc-exechang.vercel.app/" />
+
+    <!-- Json-ld  -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Executive Hangar",
+        "url": "https://sc-exechang.vercel.app",
+        "author": {
+          "@type": "Person",
+          "name": "Feareis",
+          "url": "https://github.com/Feareis"
+        },
+        "description": "Star Citizen's Executive Hangar offers high-tier loot, exclusive ships, and rare components.",
+        "inLanguage": "en"
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
