@@ -92,16 +92,16 @@ const socialLinks = [
 export const Navbar = () => {
   return (
     <header className="w-full flex h-16 bg-[#304149] border-b border-gray-700/60 shadow-lg">
-      <div className="w-[60%] mx-auto h-full flex items-center justify-between">
+      <div className="w-[62%] mx-auto h-full flex items-center justify-between">
         {/* Logo link to home */}
         <Link
           to="/"
           className="flex items-center gap-2 py-2 rounded-lg text-gray-400 transition-all duration-200"
         >
           <img
-            src="/logo.ico"
+            src="/logo-site.ico"
             alt="Star Citizen - Executive Hangar Logo"
-            className="w-18 h-18 object-contain"
+            className="w-14 h-14 object-contain"
             draggable={false}
           />
         </Link>
