@@ -1,3 +1,10 @@
+/*
+ * Star Citizen - Executive Hangar, Based Project
+ * Copyright (c) 2025 Feareis
+ * SPDX-License-Identifier: MIT
+ * Author: https://github.com/Feareis
+ */
+
 import { FC, useState, useEffect } from "react";
 import { ChevronUp, ChevronDown } from "lucide-react";
 

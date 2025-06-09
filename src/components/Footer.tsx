@@ -1,3 +1,10 @@
+/*
+ * Star Citizen - Executive Hangar, Based Project
+ * Copyright (c) 2025 Feareis
+ * SPDX-License-Identifier: MIT
+ * Author: https://github.com/Feareis
+ */
+
 export const Footer = () => {
   return (
     <footer className="bg-[#304149] border-t border-gray-700/60 shadow-md py-6">

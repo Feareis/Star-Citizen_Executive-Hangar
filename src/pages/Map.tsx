@@ -1,3 +1,10 @@
+/*
+ * Star Citizen - Executive Hangar, Based Project
+ * Copyright (c) 2025 Feareis
+ * SPDX-License-Identifier: MIT
+ * Author: https://github.com/Feareis
+ */
+
 import { useState, useRef, useEffect } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { AlertCard } from "@components/card/AlertCard";

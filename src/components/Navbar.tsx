@@ -1,3 +1,10 @@
+/*
+ * Star Citizen - Executive Hangar, Based Project
+ * Copyright (c) 2025 Feareis
+ * SPDX-License-Identifier: MIT
+ * Author: https://github.com/Feareis
+ */
+
 import { useLocation, Link } from "react-router-dom";
 import { Orbit, Home, Map, Timer, Plane, Wrench, Github } from "lucide-react";
 import BuyMeACoffeeButton from "@components/button/BuyMeACoffeeButton";
