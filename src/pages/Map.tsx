@@ -77,7 +77,7 @@ const Maps = () => {
 
   return (
     <div className="flex flex-col h-full gap-6">
-      <AlertCard variant="info" title="Informations" textSize="text-base" listItems={["You can zoom on map", "For the timer section, You can close the section and view timers directly"]} />
+      <AlertCard variant="info" title="Informations" textSize="text-base" listItems={["You can zoom on map.", "For the timer section, You can close the section and view timers directly.", "Timers do not reset if you change/quit the page."]} />
       {/* Sidebar */}
       <div className="flex gap-6">
         <aside className="w-60 bg-[#212526] border border-gray-700/70 rounded-lg p-4 space-y-3">
