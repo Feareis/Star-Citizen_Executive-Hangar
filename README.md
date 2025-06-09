@@ -2,6 +2,7 @@
   <samp>&gt; Star Citizen - Executive Hangar</samp>
 </h3>
 
+
 <p align=center>
   <br>
   <a href="https://sc-exechang.vercel.app" target="_blank"><img src="src/assets/images/sceh-site-logo.png"/></a>
@@ -10,12 +11,14 @@
   <br>
 </p>
 
-## 🚀 Usage
+
+## 🛠️ Technical stack
+
 
 > [!WARNING]  
 > The timer may have a slight lead or delay (30s to 1min) compared to the in-game server.  
+> Work on __4.1.1__ of Star Citizen Live.
 
-## 🛠️ Technical stack
 
 | Stack | Notes |
 | - | - |
@@ -24,7 +27,7 @@
 | Visualisation | Interactive components |
 
 
-
 ## 📄 License
+
 
 This project is licensed under the [MIT License](./LICENSE).
