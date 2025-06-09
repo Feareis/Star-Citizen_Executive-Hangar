@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { ShipCard } from "@components/card/ShipCard";
 import { shipsAssets } from "@assets/images/ships";
+import { AlertCard } from "@components/card/AlertCard";
 
 const ships = [
   {
     name: "Anvil F7A Hornet Mk II",
     imageUrl: shipsAssets.F7AMK2,
-    tags: ["Medium Fighter"],
+    tags: ["Combat", "Medium Fighter"],
     description: "An elite military-grade fighter with superior firepower.",
     links: [
       {
@@ -26,7 +27,7 @@ const ships = [
   {
     name: "Anvil F8C Lightning",
     imageUrl: shipsAssets.F8C,
-    tags: ["Heavy Fighter"],
+    tags: ["Combat", "Heavy Fighter"],
     description: "A rare civilian version of the UEE’s top fighter, built by Anvil.",
     links: [
       {
@@ -46,7 +47,7 @@ const ships = [
   {
     name: "Drake Corsair",
     imageUrl: shipsAssets.CORSAIR,
-    tags: ["Exploration", "Multi-Crew"],
+    tags: ["Exploration", "Expedition"],
     description: "A versatile explorer ship with strong firepower, large cargo, and room for 4 crew.",
     links: [
       {
@@ -66,7 +67,7 @@ const ships = [
   {
     name: "Drake Cutlass Black",
     imageUrl: shipsAssets.CUTLASSBLACK,
-    tags: ["Medium Freight", "Multi-Crew"],
+    tags: ["Multi-Role", "Medium Freight"],
     description: "A cheap, rugged multi-role ship with solid cargo space.",
     links: [
       {
@@ -86,7 +87,7 @@ const ships = [
   {
     name: "Gatac Syulen",
     imageUrl: shipsAssets.SYULEN,
-    tags: ["Starter", "Light Freight"],
+    tags: ["Multi-Role", "Starter"],
     description: "A fast, light cargo ship made for Human and Xi'an pilots.",
     links: [
       {
@@ -113,9 +114,10 @@ const ShipReward = () => {
     : ships;
 
   return (
-    <div className="flex">
+    <div className="flex flex-col gap-6">
+      <AlertCard variant="warning" title="Informations" textSize="text-base" listItems={["Ships are named as such in your hangar '[Ship name] PYAM Exec'", "All PYAM ships have a very specific paint scheme"]} />
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {ships.map((ship, i) => (
           <ShipCard key={i} {...ship} />
         ))}
